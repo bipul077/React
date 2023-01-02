@@ -1,17 +1,9 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom';
-export class NavBar extends Component {
-  constructor(){
-    super();
-    console.log("hello i am a constructor from news component");
-    this.state={
-
-    }
-  }
-  render() {
+const NavBar = (props)=>{ 
     return (
       <div>
-        <nav className="navbar navbar-expand-lg bg-light">
+        <nav className="navbar fixed-top navbar-expand-lg bg-light">
         <div className="container-fluid">
             <Link className="navbar-brand" to="/">News</Link>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,7 +14,6 @@ export class NavBar extends Component {
                 <li className="nav-item"><Link className="nav-link active" aria-current="page" to="/">Home</Link></li>
                 <li className="nav-item"><Link className="nav-link" to="/business">Business</Link></li>
                 <li className="nav-item"><Link className="nav-link" to="/entertainment">Entertainment</Link></li>
-                <li className="nav-item"><Link className="nav-link" to="/general">General</Link></li>
                 <li className="nav-item"><Link className="nav-link" to="/health">Health</Link></li>
                 <li className="nav-item"><Link className="nav-link" to="/science">Science</Link></li>
                 <li className="nav-item"><Link className="nav-link" to="/sports">Sports</Link></li>
@@ -33,7 +24,7 @@ export class NavBar extends Component {
         </nav>
       </div>
     )
-  }
+
 }
 
 export default NavBar

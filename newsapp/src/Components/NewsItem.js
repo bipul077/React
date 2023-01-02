@@ -1,13 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export class NewsItem extends Component {
-  constructor(){
-    super();
-    // console.log("what's up") 
-  }
+const NewsItem = (props) => {
 
-  render() {
-    let {title,description,imageUrl,newsUrl,author,published} = this.props;// destructuring,passed from News.js
+ 
+    let {title,description,imageUrl,newsUrl,author,published} = props;// destructuring,passed from News.js
     
     return (
       <div className="my-3">
@@ -22,7 +18,7 @@ export class NewsItem extends Component {
       </div>
       </div>
     )
-  }
+
 }
 
 export default NewsItem
